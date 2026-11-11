@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button"
 import { resolveAppLanguage, type AppLanguage } from "@/i18n"
 import { cn } from "@/lib/utils"
 
-const options: { code: AppLanguage; labelKey: "language.ru" | "language.en" }[] =
-  [
-    { code: "ru", labelKey: "language.ru" },
-    { code: "en", labelKey: "language.en" },
-  ]
+const options: {
+  code: AppLanguage
+  labelKey: "language.ru" | "language.en"
+}[] = [
+  { code: "en", labelKey: "language.en" },
+  { code: "ru", labelKey: "language.ru" },
+]
 
 export function LanguageSwitcher({ className }: { className?: string }) {
   const { t, i18n } = useTranslation()

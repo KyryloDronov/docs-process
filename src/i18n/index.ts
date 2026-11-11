@@ -5,12 +5,12 @@ import { initReactI18next } from "react-i18next"
 import commonEn from "@/locales/en/common.json"
 import commonRu from "@/locales/ru/common.json"
 
-export const supportedLngs = ["ru", "en"] as const
+export const supportedLngs = ["en", "ru"] as const
 export type AppLanguage = (typeof supportedLngs)[number]
 
 export function resolveAppLanguage(lng?: string): AppLanguage {
-  const code = (lng ?? i18n.language ?? "ru").toLowerCase()
-  return code.startsWith("en") ? "en" : "ru"
+  const code = (lng ?? i18n.language ?? "en").toLowerCase()
+  return code.startsWith("ru") ? "ru" : "en"
 }
 
 void i18n
@@ -22,14 +22,14 @@ void i18n
       en: { common: commonEn },
     },
     supportedLngs: [...supportedLngs],
-    fallbackLng: "ru",
+    fallbackLng: "en",
     defaultNS: "common",
     ns: ["common"],
     interpolation: { escapeValue: false },
     detection: {
-      order: ["localStorage", "navigator"],
+      order: ["localStorage"],
       caches: ["localStorage"],
-      lookupLocalStorage: "docs-sim-lng",
+      lookupLocalStorage: "docs-sim-language",
     },
   })
 

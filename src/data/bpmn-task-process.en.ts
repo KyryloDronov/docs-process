@@ -64,7 +64,7 @@ export const bpmnLanes: BpmnLane[] = [
   },
 ]
 
-export const bpmnNodes = [
+export const bpmnNodes: BpmnNode[] = [
   {
     id: "start",
     kind: "start",
@@ -259,7 +259,7 @@ export const bpmnNodes = [
   },
 ]
 
-export const bpmnArtifacts = [
+export const bpmnArtifacts: BpmnArtifact[] = [
   { id: "art-request", afterNodeId: "need", label: "Request", icon: "doc" },
   {
     id: "art-bc",
@@ -324,7 +324,7 @@ export const bpmnArtifacts = [
   },
 ]
 
-export const bpmnEdges = [
+export const bpmnEdges: BpmnEdge[] = [
   { id: "e-start-need", source: "start", target: "need", kind: "main" },
   {
     id: "e-need-bc",

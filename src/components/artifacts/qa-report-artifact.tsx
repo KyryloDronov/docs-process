@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next"
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -26,7 +25,9 @@ export function QaReportArtifact() {
               <Badge variant="outline">{doc.status}</Badge>
               <Badge variant="outline">{doc.version}</Badge>
             </div>
-            <h3 className="text-xl font-semibold tracking-tight">{doc.title}</h3>
+            <h3 className="text-xl font-semibold tracking-tight">
+              {doc.title}
+            </h3>
             <p className="text-sm text-muted-foreground">
               {caseStudyMeta.company} · {caseStudyMeta.initiative}
             </p>

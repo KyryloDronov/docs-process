@@ -1,8 +1,4 @@
-import type {
-  FoundationGuide,
-  FoundationNavItem,
-  FoundationSection,
-} from "./foundation"
+import type { FoundationGuide, FoundationNavItem } from "./foundation"
 
 export type {
   FoundationNavItem,
